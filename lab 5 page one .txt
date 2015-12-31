@@ -1,0 +1,6 @@
+<html>
+<link rel="stylesheet"
+href="mystyles.css">
+<class="danger">
+this is page one
+</html>

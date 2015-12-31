@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>
+Four Function Calculator
+</title>
+</head>
+
+<body>
+<center>
+<h1>
+Simple Four Function Calculator
+</h1>
+
+<form name="form1">
+<table border="0"
+style="font-size:20">
+	Variable 1:<input type="text" name="valuex">Variable 2:<input type="text" name="valuey">
+	<br><br>
+	<input type="button" onclick="addition()" value="+"><input type="button" onclick="subtraction()" value="-"><input type="button" onclick="multiplication()" value="*"><input type="button" onclick="division()" value="/">
+</table>
+<br>
+<hr>
+Answer:<input type="text" name="answer">
+<br>
+
+
+<script>
+
+
+function addition()
+{
+x=form1.valuex.value
+y=form1.valuey.value
+form1.answer.value=x-(-y)
+}
+
+
+function subtraction()
+{
+x=form1.valuex.value
+y=form1.valuey.value
+form1.answer.value=x-y
+}
+
+function multiplication()
+{
+x=form1.valuex.value
+y=form1.valuey.value
+form1.answer.value=x*y
+}
+
+function division()
+{
+x=form1.valuex.value
+y=form1.valuey.value
+form1.answer.value=x/y
+
+if (y=0)
+{form1.answer.value="undefined"}
+}
+
+</script>
+</center>
+</body>
+</html>

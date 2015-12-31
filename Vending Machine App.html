@@ -1,0 +1,95 @@
+<html>
+<body>
+<h2>
+Vending Machine
+</h2>
+<form name="form1">
+<table boarder="0" style="font-size:20">
+<tr><td><img src="http://3.bp.blogspot.com/-s2UJI1iAa7s/T7NFxpXaPPI/AAAAAAABwBc/2cpWtTaj73I/s1600/Reeses_Peanut_Butter_Cups.jpg" name="reeses" height="100" width="200">
+<td><img src="http://idea-booth.com/wp-content/uploads/2013/06/Skittles-Wrapper-Small.jpg" name="skittles" height="100" width="200">
+<td><img src="http://www.tastyislandhawaii.com/images10/coconuts/almond_joy_bar.jpg" name="almondjoy" height="100" width="200">
+<tr><td><input type="button" name="b1" onclick="a()" value=".75"><td><input type="button" name="b2" onclick="b()" value="1.00"><td><input type="button" name="b3" onclick="c()" value="1.25" >
+<tr><td><input type="button" name="c1" onclick="drop$()" value="Drop in $1"><td>Total Money Inserted<br><input type="text" name="moneyvalue"><td><input type="text" name="error">
+</table>
+
+<h2>
+Vending Dispenser
+</h2>
+
+<table boarder="0" style="font-size:20">
+<tr><td><img src="" name="blank" height="100" width="200"><td>Change<input type="text" name="change">
+</table>
+
+
+<script>
+
+reesesprice=form1.b1.value
+skittlesprice=form1.b2.value
+almondjoyprice=form1.b3.value
+dollar=0
+
+function a()
+{
+alert(99)
+alert(form1.moneyvalue.value)
+alert(reesesprice)
+	if(form1.moneyvalue.value<reesesprice)
+	{
+	//alert("hey")
+		form1.error.value="Need more Money"
+	} 
+		else
+		{
+		form1.change.value=form1.moneyvalue.value-reesesprice
+		form1.blank.src=form1.reeses.src
+		form1.error.value=""
+		}
+}
+
+
+function b()
+{
+	if(form1.moneyvalue.value<skittlesprice)
+		{
+		form1.error.value="Need more Money"
+		}
+	if(form1.moneyvalue.value>=skittlesprice)
+		{
+		form1.change.value=form1.moneyvalue.value-skittlesprice
+		form1.blank.src=form1.skittles.src
+		form1.error.value=""
+		}
+}
+
+function c()
+{
+if(form1.moneyvalue.value<almondjoyprice)
+		{
+		form1.error.value="Need more Money"
+		}
+	if(form1.moneyvalue.value>=almondjoyprice)
+		{
+		form1.change.value=form1.moneyvalue.value-almondjoyprice
+		form1.blank.src=form1.almondjoy.src
+		form1.error.value=""
+		}
+}
+
+
+
+function drop$()
+{
+form1.error.value=""
+dollar=dollar+1
+form1.moneyvalue.value=dollar
+//form1.change.value=form1.moneyvalue.value-reessesprice
+}
+
+
+
+
+
+</script>
+</form>
+</body>
+</html>

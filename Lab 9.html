@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Pizza Ordering App</title>
+</head>
+
+<body>
+<h1>
+Pizza Ordering App
+</h1>
+
+<form name="form1">
+<table border="0"
+style="font-size:20"
+name="table1">
+<tr><td><select size=7 name="select1">
+    <option value="peppers">peppers</option>
+    <option value="onion">onions</option>
+    <option value="extracheese">extra cheese</option>
+    <option value="pineapple">pineapple</option>
+    <option value="pepperoni">pepperoni</option>
+    <option value="mushroom">mushroom</option>
+    <option value="meatball">meatball</option>
+</select>
+
+<td><input type="button" onclick="sel()" value="Select -> ">
+<br>
+<input type="button" onclick="rem()" value="<- Remove ">
+
+<td><td><select size=7 name="select2">
+</select>
+
+<tr>
+<td><input type="button" onclick="fax()" value="Fax Order">
+</textarea>
+</table>
+</form>
+
+<script>
+
+
+function sel()
+{
+i1=form1.select1.selectedIndex
+//alert(i1)//
+t1=form1.select1.options[i1].text
+//alert (t1)//
+form1.select2.options.add(new Option (t1))
+form1.select1.options.remove(i1)
+}
+
+function rem()
+{
+i2=form1.select2.selectedIndex
+//alert(i2)//
+t2=form1.select2.options[i2].text
+//alert (t2)//
+form1.select1.options.add(new Option (t2))
+form1.select2.options.remove(i2)
+}
+
+function fax()
+{
+//alert(form1.select2.options[0].text)//
+
+z=""
+for(x=0;x<form1.select2.options.length;x=x+1)
+{
+//alert(x)//
+z= form1.select2.options[x].text +"\n"+ z
+}
+alert(z)
+}
+
+</script>
+
+
+
+
+
+
+
+
+<body>
+</html>

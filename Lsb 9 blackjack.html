@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Black Jack App</title>
+</head>
+
+<body>
+<form name="form1">
+<table border="1"
+style="font-size:20">
+<tr><td>Player's Value:<input type="text" name="value1">
+<td>Dealer's Value:<input type="text" name="value2">
+<tr><td>Player's Hand:<input type="text" name="value3">
+<td>Dealer's Hand:<input type="text" name="value4">
+<tr><td><input type="button" onclick="hitme()" value="Hit Me">
+<td><input type="button" onclick="hitdealer()" value="Hit Dealer">
+<td><input type="button" onclick="newdeal()" value="New Deal">
+</table>
+
+<script>
+alert(77)
+a=[2,3,4,5,6,7,8,9,10,10,10,10,11]
+b=["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
+
+function hitme()
+{
+x=Math.random()
+y=Math.floor(x*13)
+d=form1.value3.value
+c=form1.value1.value
+form1.value1.value= (c*1 + a[y]*1)
+form1.value3.value=(d+ "\n" +b[y])
+c=form1.value1.value
+
+if(c*1>21)[alert("You Lose")]
+}
+
+function hitdealer()
+{
+x=Math.random()
+y=Math.floor(x*13)
+d=form1.value2.value
+c=form1.value4.value
+form1.value4.value= (c*1 + a[y]*1)
+form1.value2.value=(d+ "\n" +b[y])
+c=form1.value4.value
+if(c*1<16)[alert("Must Hit")]
+if(c*1>17)[alert("Must Stay")]
+if(c*1>21)[alert("Dealer Looses")]
+}
+
+function newdeal()
+{
+form1.value1.value=""
+form1.value2.value=""
+form1.value3.value=""
+form1.value4.value=""
+}
+
+</script>
+</body>
+</html>

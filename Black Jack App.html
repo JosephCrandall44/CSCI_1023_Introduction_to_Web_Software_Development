@@ -1,0 +1,60 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Black Jack App</title>
+</head>
+
+<body>
+<form name="form1">
+<table style="font-size:20" border="1">
+<tbody><tr><td>Player's Value:<input value="20" name="value1" type="text">
+</td><td>Dealer's Value:<input value="9" name="value2" type="text">
+</td></tr><tr><td>Player's Hand:<input value="45A" name="value3" type="text">
+</td><td>Dealer's Hand:<input value="9" name="value4" type="text">
+</td></tr><tr><td><input onclick="hitme()" value="Hit Me" type="button">
+</td><td><input onclick="hitdealer()" value="Hit Dealer" type="button">
+</td><td><input onclick="newdeal()" value="New Deal" type="button">
+</td></tr></tbody></table>
+
+<script>
+alert(77)
+a=[2,3,4,5,6,7,8,9,10,10,10,10,11]
+b=["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
+
+function hitme()
+{
+x=Math.random()
+y=Math.floor(x*13)
+d=form1.value3.value
+c=form1.value1.value
+form1.value1.value= (c*1 + a[y]*1)
+form1.value3.value=(d+ "\n" +b[y])
+c=form1.value1.value
+
+if(c*1>21)[alert("You Lose")]
+}
+
+function hitdealer()
+{
+x=Math.random()
+y=Math.floor(x*13)
+d=form1.value2.value
+c=form1.value4.value
+form1.value4.value= (c*1 + a[y]*1)
+form1.value2.value=(d+ "\n" +b[y])
+c=form1.value4.value
+if(c*1<16)[alert("Must Hit")]
+if(c*1>17)[alert("Must Stay")]
+if(c*1<21)[alert("Dealer Looses")]
+}
+
+function newdeal()
+{
+form1.value1.value=""
+form1.value2.value=""
+form1.value3.value=""
+form1.value4.value=""
+}
+
+</script>
+
+</form></body></html>

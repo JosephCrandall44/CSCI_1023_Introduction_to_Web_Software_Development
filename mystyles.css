@@ -1,0 +1,10 @@
+.danger {color: orange ; font-family:arial}
+.help {color:blue;font-family: garamond}
+i {color:blue}
+b.danger{color:green}
+b{style:i}
+
+a:link {color:blue;}    /* unvisited link */
+a:visited {color:red;} /* visited link */
+a:hover {color:grey;}   /* mouse over link */
+a:active {color:pinl;}  /* selected link */

@@ -1,0 +1,24 @@
+<html>
+<script>
+URLstring = window.location.href
+alert(URLstring)
+s=URLstring
+a=s.split("=")
+b=a[1].split("&")
+c=b[0]
+d=a[2]
+user = ["joe","john","james"]
+password = [123,231,312]
+x=0
+y=0
+for(i=0;i<user.length;i=i+1)
+{
+   if (c==user[i]) {x=x+1; 
+                    if (d==password[i]){y=y+1}
+                    }
+}
+if (x>0) {alert ("user name valid")} else {alert ("user name invalid")}
+if (y>0) {alert ("password valid")} else {alert ("password invalid")}
+if(x>0&&y>0) {alert ("login valid")} else {alert ("login invalid")}
+</script>
+</html>

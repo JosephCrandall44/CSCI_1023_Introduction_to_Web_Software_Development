@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>
+Web Shopping made Easy
+</title>
+<h1>Web Shopping Made easy</h1>
+</head>
+<body>
+
+<form name="form1">
+<table boarder="0" style="font-size:20">
+<tr bgcolor="orange"><td> <select name="drop">
+	<option>Mac Book Pro $2,000
+	<option>IPhone $400
+	<option>IPod $ 200
+	<option>HP Printer $175
+	<option>Heart of Darkness $7.99
+	<option>Spam $5,000,000,000
+	<option>Camaro $ 25,000
+	</select>
+	<td><input type="button" name="b1" onclick="atb()" value="Add to basket">
+	<tr bgcolor="orange">
+	<td><input type="button" name="b2" onclick="co()" value="Checkout">
+	<tr bgcolor="orange">
+	<td bgcolor="orange"><input type="button" name="b3" onclick="eb()" value="Empty basket">
+	</table>	
+<hr>
+<h1>
+Your Order
+</h1>
+<textarea name="yourorder" >
+
+</textarea>
+
+
+<script>
+Names=["Mac Book Pro","IPhone","IPod","HP Printer","Heart of Darkness","Spam","Camaro"]
+Values=[2000,400,200,175,7.99,5000000000,250000]
+Quantity=[0,0,0,0,0,0,0]
+alert(Quantity)
+function atb()
+{
+x=form1.drop.selectedIndex
+alert(Quantity)
+Quantity[x]=1
+alert(Quantity)
+//change item in drop down menu from 0 to 1 in array 3//
+}
+function co()
+{
+sum=0
+	for (x=0;x<7;x=x+1)
+		{
+		if (Quantity[x]==1) 
+			{
+				form1.yourorder.value=form1.yourorder.value + "\r\n" +Names[x]+"   "+"$"+ Values[x] 
+				sum=Values[x]+sum
+				alert(sum)
+			}
+		}
+form1.yourorder.value=form1.yourorder.value+"\r\n"+"Total"+"   "+"$"+sum		
+}
+function eb()
+{
+form1.yourorder.value=""
+}
+
+
+
+</script>
+</body>
+</html>

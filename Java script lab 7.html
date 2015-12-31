@@ -1,0 +1,91 @@
+<html>
+<head>
+<h1>
+Vote Early, Vote Often!
+</h1>
+</head>
+
+<body>
+<form name="form1">
+<table border="0"
+style="font-size:20">
+	<tr><td><img <img src="http://blogs.denverpost.com/thespot/files/2012/07/Mitt-Romney-June-2012.jpg" width="304" height="228"><td><img src="http://media.heavy.com/media/2013/04/Obama-tough-talk1.jpg" width="304" height="228"><td><input type="text" name="writein">
+	<tr><td>Romney<td>Obama<td>[Write In]
+	<tr><td><input type="button" onclick="rom()" value="vote"><td><input type="button" onclick="obm()" value="vote"><td><input type="button" onclick="ind()" value="vote">
+</table>
+<br>
+<hr>
+<br>
+
+<h1>
+Election Results
+</h1>
+
+
+
+<br>
+<textarea name="results">
+</textarea>
+<br>
+Current Leader: <input type="text" name="thebest">
+
+</form>
+
+
+<script>
+r=0
+o=0
+i=0
+
+function rom()
+{
+r=r+1
+b=form1.writein.value
+form1.results.value="Romney "+r+"\r\n"+"Obama "+o+"\r\n"+b+" "+i
+
+if (r>o&&r>i)
+{form1.thebest.value="Romney"}
+if (o>r&&o>i)
+{form1.thebest.value="Obama"}
+if (i>r&&i>o)
+{form1.thebest.value=b}
+}
+
+
+
+function obm()
+{
+o=o+1
+b=form1.writein.value
+form1.results.value="Romney "+r+"\r\n"+"Obama "+o+"\r\n"+b+" "+i
+
+if (r>o&&r>i)
+{form1.thebest.value="Romney"}
+if (o>r&&o>i)
+{form1.thebest.value="Obama"}
+if (i>r&&i>o)
+{form1.thebest.value=b}
+}
+
+
+function ind()
+{
+i=i+1
+b=form1.writein.value
+form1.results.value="Romney "+r+"\r\n"+"Obama "+o+"\r\n"+b+" "+i
+
+if (r>o&&r>i)
+{form1.thebest.value="Romney"}
+if (o>r&&o>i)
+{form1.thebest.value="Obama"}
+if (i>r&&i>o)
+{form1.thebest.value=b}
+}
+
+
+
+
+
+</script>
+</body>
+</html>

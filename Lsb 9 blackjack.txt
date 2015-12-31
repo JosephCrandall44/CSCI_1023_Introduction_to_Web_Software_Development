@@ -1,0 +1,27 @@
+<html>
+
+
+<type="button" onclick="addition()" value="Hit Me">
+<type="button" onclick="addition()" value="Hit the Dealer">
+<type="button" onclick="addition()" value="New Deal">
+
+
+<script>
+/*
+x=0
+if (x == 0)
+{alert
+("zerp"
+}
+x=x+5
+if (x>7) {alert(big)
+else
+{alert("small")}
+s="Hello"
+s="s+",everybody!"
+alert(s)
+*/
+	a=[2,3,5,7,9,11,13]
+	alert(a[4])
+	alert(x)
+<html>
